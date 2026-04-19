@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>giatrash.gr</title>
+    
+    <title>giatrash.gr | Ψηφιακές Δημιουργίες</title>
+    <meta name="description" content="giatrash.gr - Ψηφιακές δημιουργίες, Engineering, IT, Γεωπονία, Ναυσιπλοΐα και Φιλοσοφία.">
+    <meta name="keywords" content="giatrash, ψηφιακές δημιουργίες, Lab, Engineering, IT, Γεωπονία, Ναυσιπλοΐα, Ηλεκτρονικά, Οικονομία, Φιλοσοφία">
+    <meta name="author" content="gh">
+
     <style>
         body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; font-family: sans-serif; }
         .bg { 
@@ -14,14 +19,42 @@
             justify-content: center; 
             align-items: center; 
         }
-        h1 { color: white; font-weight: 300; letter-spacing: 3px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); font-size: 2.5rem; }
+        h1 { color: white; font-weight: 300; letter-spacing: 3px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); font-size: 2.5rem; text-align: center; }
         
-        .gh-btn { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: rgba(255,255,255,0.2); border: 1px solid white; border-radius: 50%; color: white; display: flex; justify-content: center; align-items: center; cursor: pointer; backdrop-filter: blur(5px); font-weight: bold; font-size: 20px; transition: 0.3s; z-index: 100; }
-        .gh-btn:hover { background: white; color: black; }
+        /* Lifesaver Style Button with gh initials */
+        .lifesaver-btn { 
+            position: fixed; 
+            bottom: 20px; 
+            right: 20px; 
+            width: 70px; 
+            height: 70px; 
+            background: rgba(255, 255, 255, 0.1); 
+            border: 5px double white; 
+            border-radius: 50%; 
+            color: white; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            cursor: pointer; 
+            backdrop-filter: blur(10px); 
+            font-weight: bold; 
+            font-size: 22px; 
+            letter-spacing: 1px;
+            transition: 0.3s; 
+            z-index: 100;
+            box-shadow: 0 0 15px rgba(255,255,255,0.2);
+            text-transform: lowercase;
+        }
+        .lifesaver-btn:hover { 
+            background: white; 
+            color: black; 
+            transform: rotate(15deg) scale(1.1); 
+        }
 
-        .modal { display: none; position: fixed; bottom: 100px; right: 30px; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 101; width: 250px; }
-        .modal a { display: block; padding: 10px; margin: 5px 0; text-decoration: none; color: #333; border-radius: 8px; transition: 0.2s; background: #f4f4f4; text-align: center; font-size: 14px; }
-        .modal a:hover { background: #e0e0e0; }
+        /* Modal Popup */
+        .modal { display: none; position: fixed; bottom: 100px; right: 20px; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 101; width: 260px; }
+        .modal a { display: block; padding: 12px; margin: 8px 0; text-decoration: none; color: #333; border-radius: 8px; transition: 0.2s; background: #f8f8f8; text-align: center; font-size: 14px; border: 1px solid #eee; }
+        .modal a:hover { background: #efefef; border-color: #ccc; }
     </style>
 </head>
 <body>
@@ -29,13 +62,12 @@
         <h1>ψηφιακές δημιουργίες</h1>
     </div>
 
-    <div class="gh-btn" onclick="toggleModal()">gh</div>
+    <div class="lifesaver-btn" onclick="toggleModal()">gh</div>
 
     <div id="contactModal" class="modal">
-        <strong style="display:block; margin-bottom:10px; font-size: 16px; color: #000;">Επικοινωνία</strong>
-        <a href="mailto:giatrash@gmail.com">📧 Email</a>
-        <a href="https://wa.me/30XXXXXXXXXX" target="_blank">💬 WhatsApp Business</a>
-        <a href="#" onclick="toggleModal()" style="background:none; font-size:12px; color:#999;">Κλείσιμο</a>
+        <strong style="display:block; margin-bottom:10px; font-size: 16px; color: #000; text-align: center;">Επικοινωνία</strong>
+        <a href="mailto:giatrash@gmail.com">📧 giatrash@gmail.com</a>
+        <a href="#" onclick="toggleModal()" style="background:none; border:none; font-size:12px; color:#999; margin-top:5px; display: block; text-align: center;">Κλείσιμο</a>
     </div>
 
     <script>
